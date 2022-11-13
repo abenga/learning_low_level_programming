@@ -11,7 +11,6 @@ fn main() {
 
     let mut total = 0;
     for i in 1..(limit+1) {
-        println!("{}", i);
         if i % 3 == 0 || i % 5 == 0 {
             total += i;
         }
