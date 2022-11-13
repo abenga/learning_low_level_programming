@@ -1,5 +1,5 @@
 [package]
-name = "0001_sum_natural_numbers"
+name = "gcd"
 version = "0.1.0"
 edition = "2021"
 
