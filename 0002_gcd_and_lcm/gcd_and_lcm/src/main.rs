@@ -1,4 +1,11 @@
 
+// Write a program that, given two positive integers, will calculate and print the greatest
+// common divisor of the two.
+
+// Write a program that will, given two or more positive integers, calculate and print the least
+// common multiple of them all.
+
+
 fn gcd(a: u32, b: u32) -> u32 {
     let (mut m, mut n) = if a > b { (a, b) } else { (b, a) };
     let mut r = m % n;
