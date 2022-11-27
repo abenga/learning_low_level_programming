@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "largest_prime"
+name = "primes"
 version = "0.1.0"

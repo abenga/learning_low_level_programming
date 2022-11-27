@@ -1,6 +1,4 @@
 
-use std::io;
-
 
 fn is_prime(a: u32) -> bool {
     return if a <= 3 {
@@ -19,7 +17,8 @@ fn is_prime(a: u32) -> bool {
     }
 }
 
-
+// Write a program that computes and prints the largest prime number that is
+// smaller than a number provided by the user, which must be a positive integer.
 fn largest_prime_less_than_limit(lim: u32) -> u32 {
     let mut i = lim;
     while i > 1 {
@@ -43,9 +42,8 @@ fn main() {
 
     let limit: u32 = 2;
 
-    println!("largest_prime_less_than_limit({}) = {}", limit, largest_prime_less_than_limit(limit));
-
-
+    println!("largest_prime_less_than_limit({}) = {}",
+             limit, largest_prime_less_than_limit(limit));
 }
 
 
@@ -59,6 +57,7 @@ mod tests {
         assert_eq!(is_prime(2), true);
         assert_eq!(is_prime(3), true);
         assert_eq!(is_prime(4), false);
+        assert_eq!(is_prime(31), true);
     }
 
     #[test]
@@ -66,6 +65,9 @@ mod tests {
         assert_eq!(largest_prime_less_than_limit(1), 0);
         assert_eq!(largest_prime_less_than_limit(2), 2);
         assert_eq!(largest_prime_less_than_limit(154), 151);
+        assert_eq!(largest_prime_less_than_limit(4_093), 4_093);
+        assert_eq!(largest_prime_less_than_limit(5_000_000), 4_999_999);
+
     }
 
 }
