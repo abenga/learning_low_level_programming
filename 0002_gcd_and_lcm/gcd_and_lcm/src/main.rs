@@ -1,7 +1,8 @@
-
+// The Modern C++ Challenge, Cap 1, Q2
 // Write a program that, given two positive integers, will calculate and print the greatest
 // common divisor of the two.
 
+// The Modern C++ Challenge, Cap 1, Q3
 // Write a program that will, given two or more positive integers, calculate and print the least
 // common multiple of them all.
 

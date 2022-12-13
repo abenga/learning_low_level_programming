@@ -45,6 +45,7 @@ fn get_proper_divisors(num: u32) -> Vec<u32> {
     divisors
 }
 
+// Modern C++ Challenge, Cap 1, Q4
 // Write a program that computes and prints the largest prime number that is
 // smaller than a number provided by the user, which must be a positive integer.
 fn largest_prime_less_than_limit(lim: u32) -> u32 {
@@ -59,7 +60,7 @@ fn largest_prime_less_than_limit(lim: u32) -> u32 {
     0
 }
 
-
+// Modern C++ Challenge, Cap 1, Q5
 // Write a program that prints all the sexy prime pairs up to a limit entered by the user
 fn print_sexy_primes_less_than_limit(lim: u32) -> Vec<Vec<u32>> {
     let mut res: Vec<Vec<u32>> = Vec::new();
@@ -72,7 +73,7 @@ fn print_sexy_primes_less_than_limit(lim: u32) -> Vec<Vec<u32>> {
     res
 }
 
-
+// Modern C++ Challenge, Cap 1, Q9
 // Write a program that returns the prime factors of a number entered by the user
 fn get_prime_factors(num: u32) -> Vec<u32> {
     let divisors = get_proper_divisors(num);
@@ -86,7 +87,11 @@ fn get_prime_factors(num: u32) -> Vec<u32> {
     factors
 }
 
-
+// Modern C++ Challenge, Cap 1, Q9
+// Write a program that prints all abundant numbers and their abundance, up to a number entered by
+// the user.
+//
+// Abundant numbers are numbers where the sum of all proper divisors is greater than the number.
 fn get_abundant_numbers(limit: u32) -> Vec<(u32, u32)> {
     let mut abundant_numbers: Vec<(u32, u32)> = Vec::new();
 
@@ -100,8 +105,11 @@ fn get_abundant_numbers(limit: u32) -> Vec<(u32, u32)> {
     abundant_numbers
 }
 
-
-// Print all Armstrong
+// Modern C++ Challenge, Cap 1, Q8
+// Write a program that prints all Armstrong numbers with three digits.
+//
+// An Armstrong number a number that is equal to the sum of its own digits when they are raised to
+// the power of the number of digits.
 fn get_armstrong_numbers() -> Vec<u32> {
     let mut armstrong_nums: Vec<u32> = Vec::new();
     for i in 100..1000 {
@@ -202,7 +210,7 @@ mod tests {
             vec![vec![5, 11], vec![7, 13], vec![11, 17], vec![13, 19]]
         );
     }
-    //
+
     #[test]
     fn test_get_prime_factors() {
         let empty_vec: Vec<u32> = Vec::new();
@@ -212,9 +220,9 @@ mod tests {
 
         assert_eq!(get_prime_factors(15), vec![3, 5]);
 
-        assert_eq!(get_prime_factors(1547123), vec![53, 29191]);
+        assert_eq!(get_prime_factors(1_547_123), vec![53, 29191]);
 
-        // assert_eq!(get_prime_factors(19_090_779), vec![3, 17, 37, 67, 151]);
+        assert_eq!(get_prime_factors(19_090_779), vec![3, 17, 37, 67, 151]);
     }
 
     #[test]
@@ -249,9 +257,12 @@ mod tests {
         let empty_vec: Vec<(u32, u32)> = Vec::new();
         assert_eq!(get_abundant_numbers(3), empty_vec);
 
-        // assert_eq!(get_abundant_numbers(20), empty_vec);
+        assert_eq!(get_abundant_numbers(20), vec![(12, 4), (18, 3)]);
 
-        // assert_eq!(get_prime_factors(19_090_779), vec![3, 17, 37, 67, 151]);
+        assert_eq!(
+            get_abundant_numbers(40),
+            vec![(12, 4), (18, 3), (20, 2), (24, 12), (30, 12), (36, 19)]
+        );
     }
 
 }
