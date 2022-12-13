@@ -1,6 +1,7 @@
 # What
 
-Programming Exercises and Question Answers as I read a couple of computer systems books*, and try to learn more Rust.
+Programming exercises, tiny projects, and solutions to exercises I write as I read a couple of computer systems books 
+and try to learn more Rust.
 
 ## Books
 
