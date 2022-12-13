@@ -1,3 +1,3 @@
 
 exec:	src/main.c
-	gcc -o exec src/main.c
+	gcc -o target/exec src/main.c
